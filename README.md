@@ -24,6 +24,9 @@
 
 ---
 
+# Screenshots
+<img alt="Screenshot 1" src="WindowsTerminal_35868zcnZF.png">
+
 # Getting Started
 Arcane is a terminal-based application for fetching and managing Wizard101 assets. It provides an intuitive interface for navigating, selecting, and fetching assets using a fuzzy search functionality.
 
