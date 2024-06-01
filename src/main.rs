@@ -26,6 +26,8 @@ mod parser;
 mod revision_checker;
 pub mod util;
 
+const VERSION: &str = "1.0.0";
+
 /// This struct holds the current state of the app.
 struct App {
     pub assets: AssetList,
@@ -173,7 +175,7 @@ impl Widget for &mut App {
         let block = Block::new()
             .border_type(BorderType::Rounded)
             .borders(Borders::all())
-            .title(Line::from(" Arcane (Asset-Fetcher) ").centered())
+            .title(Line::from(format!(" Arcane (Asset-Fetcher) v{VERSION} ")).centered())
             .title(Line::from(format!(" {} ", self.asset_fetcher.revision)).left_aligned())
             .title(Line::from(format!(" {} assets found ", self.assets.asset_len())).right_aligned())
             .title_bottom(Line::from(" © Phill030 (Revive101) ").left_aligned())
