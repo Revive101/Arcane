@@ -1,5 +1,5 @@
 <div align="center">
-    <img width="150px" src="arcane_logo.png" />
+    <img width="175px" src="arcane_logo.png" />
     <h1>Arcane<br></br>
     <a href="https://r101.phill030.de">
         <img alt="Discord" src="https://img.shields.io/discord/940647911182729257">
