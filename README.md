@@ -1,10 +1,18 @@
 <div align="center">
     <img width="150px" src="arcane_logo.png" />
     <h1>Arcane<br></br>
-    <img alt="Discord" src="https://img.shields.io/discord/940647911182729257">
-    <img alt="GitHub Release" src="https://img.shields.io/github/v/release/Revive101/Arcane">
+    <a href="https://r101.phill030.de">
+        <img alt="Discord" src="https://img.shields.io/discord/940647911182729257">
+    </a>
+    <a href="https://github.com/Revive101/Arcane/releases/latest">
+        <img alt="GitHub Release" src="https://img.shields.io/github/v/release/Revive101/Arcane">
+    </a>
+    <a href="https://github.com/Revive101/Arcane/releases/latest">
     <img alt="GitHub Downloads (all assets, all releases)" src="https://img.shields.io/github/downloads/Revive101/Arcane/total">
-    <img alt="Kofi" src="https://shields.io/badge/Kofi-Buy_me_a_coffee-ff5f5f?logo=ko-fi&style=for-the-badgeKofi">
+    </a>
+    <a href="https://ko-fi.com/phill030">
+        <img alt="Kofi" src="https://shields.io/badge/Kofi-Buy_me_a_coffee-ff5f5f?logo=ko-fi&style=for-the-badgeKofi">
+    </a>
     </h1>
 </div>
 
