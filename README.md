@@ -34,6 +34,9 @@ Arcane is a terminal-based application for fetching and managing Wizard101 asset
 - **Extended Information**: Toggle detailed information for selected assets.
 - **Fetching Assets**: Every asset from the game can be downloaded by this tool.
 
+> [!WARNING]  
+> Known issue: Searching may be slow due to [Levenshteins Distance](https://en.wikipedia.org/wiki/Levenshtein_distance) being calculated for every one of the 3000+ assets! (Contributions are welcome!)
+
 # Usage
 Double click the executable to start the application. As soon as you see a list of files, you can either navigate using `[⬆]` or `[⬇]` or by simply writing the name of the file you are searching for. To toggle extended file info, simply press `[SPACE]`. You can exit the application by pressing `[ESC]`.
 
