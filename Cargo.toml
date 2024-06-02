@@ -1,6 +1,6 @@
 [package]
-name = "asset_fetcher"
-version = "1.0.0"
+name = "arcane"
+version = "1.0.1"
 edition = "2021"
 
 [dependencies]
