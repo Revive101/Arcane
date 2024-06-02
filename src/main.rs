@@ -26,7 +26,7 @@ mod parser;
 mod revision_checker;
 pub mod util;
 
-const VERSION: &str = "1.0.0";
+const VERSION: &str = "1.0.1";
 
 /// This struct holds the current state of the app.
 struct App {
