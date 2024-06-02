@@ -20,6 +20,7 @@
 - [Features](#features)
 - [Usage](#usage)
 - [Contributing](#contributing)
+- [Legal Notice](#legal-notice)
 - [License](#license)
 
 ---
