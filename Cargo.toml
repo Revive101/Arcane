@@ -1,20 +1,25 @@
 [package]
 name = "arcane"
+authors = ["Phill030"]
+license-file = "LICENSE.md"
 version = "1.0.1"
 edition = "2021"
 
 [dependencies]
 anyhow = "1.0.86"
-async-trait = "0.1.80"
+async-trait = "0.1.81"
 crossterm = "0.27.0"
 fuzzywuzzy = "0.0.2"
-quick-xml = "0.31.0"
+quick-xml = "0.36.1"
 quickxml_to_serde = "0.6.0"
-ratatui = "0.26.3"
-regex = "1.10.4"
-reqwest = "0.12.4"
-serde = { version = "1.0.203", features = ["derive"] }
-serde_json = "1.0.117"
-thiserror = "1.0.61"
-tokio = { version = "1.37.0", features = ["full"] }
-tui-textarea = "0.4.0"
+ratatui = "0.27.0"
+regex = "1.10.5"
+reqwest = "0.12.5"
+serde = { version = "1.0.204", features = ["derive"] }
+serde_json = "1.0.121"
+thiserror = "1.0.63"
+tokio = { version = "1.39.2", features = ["full"] }
+tui-textarea = "0.5.2"
+
+[[bin]]
+name = "arcane"
