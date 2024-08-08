@@ -1,5 +1,5 @@
 use crossterm::{
-    event::{DisableMouseCapture, EnableMouseCapture},
+    event::{self, DisableMouseCapture, EnableMouseCapture, Event, KeyCode, KeyEvent},
     terminal::{disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen},
 };
 use fuzzywuzzy::fuzz::ratio;
@@ -19,7 +19,7 @@ use std::{
     collections::VecDeque,
     io::{self, Write},
 };
-use tui_textarea::{Input, Key, TextArea};
+use tui_textarea::TextArea;
 
 pub mod errors;
 mod parser;
@@ -129,17 +129,21 @@ impl App {
         loop {
             self.draw(terminal, &layout, &mut textarea)?;
 
-            match crossterm::event::read()?.into() {
-                Input { key: Key::Esc, .. } => break,
-                Input { key: Key::Enter, .. } => self.change_status(),
-                Input { key: Key::Up, .. } => self.assets.previous(),
-                Input { key: Key::Down, .. } => self.assets.next(),
-                Input { key: Key::Char(' '), .. } => self.toggle_info(),
-                input => {
-                    textarea.input(input);
+            if let Event::Key(key) = event::read()? {
+                match key {
+                    KeyEvent { code: KeyCode::Esc, .. } => break,
+                    KeyEvent { code: KeyCode::Enter, .. } => self.change_status(),
+                    KeyEvent { code: KeyCode::Up, .. } => self.assets.previous(),
+                    KeyEvent { code: KeyCode::Down, .. } => self.assets.next(),
+                    KeyEvent {
+                        code: KeyCode::Char(' '), ..
+                    } => self.toggle_info(),
+                    _ => {
+                        textarea.input(key);
 
-                    let content = &textarea.lines()[0].to_string();
-                    self.assets.filter_and_sort(&content);
+                        let content = &textarea.lines()[0].to_string();
+                        self.assets.filter_and_sort(&content);
+                    }
                 }
             }
         }
